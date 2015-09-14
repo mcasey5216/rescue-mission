@@ -12,4 +12,58 @@
  *
  *= require_tree .
  *= require_self
+ *= require foundation_and_overrides
+
  */
+
+body {
+  background-color: black;
+  color: white;
+  margin: 50px;
+}
+
+#question_title {
+  color: white;
+  background-color: black;
+}
+
+#question_description {
+  color: white;
+  background-color: black;
+}
+
+label {
+  color: white;
+}
+
+ h1 {
+   color: white;
+ }
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+a:hover {
+  text-decoration: underline;
+  color: green;
+}
+
+.submit_class {
+    background-color: black;
+    color: white;
+    font-family: 'Helvetica';
+    font-size: 20px;
+    text-decoration: none;
+    cursor: pointer;
+    border:none;
+}
+
+
+
+.submit_class:hover {
+    border: none;
+    background:purple;
+    box-shadow: 0px 0px 1px #777;
+}
