@@ -17,19 +17,20 @@
  */
 
 body {
-  background-color: black;
+  background-color: #888;
   color: white;
   margin: 50px;
+  font-family: 'Helvetica';
 }
 
 #question_title {
   color: white;
-  background-color: black;
+  background-color: #aaa;
 }
 
 #question_description {
   color: white;
-  background-color: black;
+  background-color: #aaa;
 }
 
 label {
@@ -51,7 +52,7 @@ a:hover {
 }
 
 .submit_class {
-    background-color: black;
+    background-color: #888;
     color: white;
     font-family: 'Helvetica';
     font-size: 20px;
@@ -66,4 +67,8 @@ a:hover {
     border: none;
     background:purple;
     box-shadow: 0px 0px 1px #777;
+}
+
+h5 {
+  color: white;
 }

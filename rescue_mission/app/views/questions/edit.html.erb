@@ -1,0 +1,21 @@
+<h1><%= @question.title %></h1>
+
+<ul>
+  <li><%= @question.description%></li>
+</ul>
+
+<h5>Update this Question</h5>
+  <%= form_for @question do |f| %>
+
+    <%= f.label :title %>
+    <%= f.text_field :title %>
+
+    <%= f.label :description %>
+    <%= f.text_area :description %>
+
+    <%= f.submit "Click here to Update", class: "submit_class button expand round" %>
+  <%- end -%>
+
+  <%= link_to "Delete Question", question_path(@question), method: :delete %>
+  <br/>
+  <%= link_to "All questions", questions_path %>

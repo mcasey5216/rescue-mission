@@ -7,14 +7,23 @@ class AnswersController < ApplicationController
   #   @answer = Answer.find_by(Question.find(params:id))
   # end
 
-  def new
-    @answer = Answer.new
-  end
-
   def create
-    @answer = Answer.new(answer_params)
-    flash[:notice] = "Thanks for answering this question!"
+    @question = Question.find(params[:question_id])
+    @answer = @question.answers.new(answer_params)
+    if @answer.save
+      flash[:notice] = "Answer added"
+      redirect_to question_path(@question)
+    else
+      flash[:alert] = "Answer not long enough"
+      render :'questions/show'
+    end
   end
 
+
+  private
+
+  def answer_params
+    params.require(:answer).permit(:description)
+  end
 
 end

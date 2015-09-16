@@ -5,6 +5,22 @@
 </ul>
 
 <h5>Answer this Question</h5>
-COMING SOON
+  <%= form_for [@question, @answer] do |f| %>
+
+      <%= f.label :description %>
+      <%= f.text_area :description %>
+
+
+      <%= f.submit "Click here to Submit an Answer", class: "submit_class button expand round" %>
+  <%- end -%>
+
+  <%= link_to "Edit Question", edit_question_path(@question)%><br/>
+  <%= link_to "Delete Question", question_path(@question), method: :delete %>
+
+  <ul>
+    <% @question.answers.reverse.each do |answer| %>
+      <li><%= answer.description %> </li>
+    <% end %>
+  </ul>
 
 <%= link_to "All questions", questions_path %>
